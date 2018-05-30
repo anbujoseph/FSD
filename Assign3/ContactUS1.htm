@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        
+        input:required:invalid, textarea:invalid{
+            background-image: url(/invalid.png);
+            background-position: left top;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 5px 1px red;
+            
+        }
+        input:focus{
+
+            outline: none;
+        }
+        input:required:valid, textarea:required {
+            background-image: url(/vaild.png);
+            background-position: left top;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 5px 1px green;
+          }
+    </style>
+  </head>
+<body>
+        <form>
+            <hr>
+             
+                <table width="90%" align="center">
+                    <tr>
+                        <td><h1> Contact US</h1></td>
+                        <td align="right" > <font color="red">* Denotes Required Field</font> </td>
+                    </tr>
+                </table>
+            
+            <hr>
+            <table width="90%" align="center">
+                <tr>
+                    <td align=Left><h2>Name:</h2></td>
+                    <td align=Left><input type="text" required placeholder="Enter Name"/></td>
+                </tr>
+                <tr>
+                    <td align=Left><h2>Email:</h2></td>
+                    <td align=Left><input type="text" required placeholder="Enter Email" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="enter Correct email with @ and domain name"/></td>
+                </tr>
+                <tr>
+                    <td align=Left><h2>Website:</h2><td>
+                    <td align=Left><input type="text" required placeholder="Enter Website"/></td>
+                </tr>
+                <tr>
+                    <td align=Left><h2>Message:</h2><td>
+                    <td><textarea rows="5" cols="50" required placeholder="Enter Message"></textarea></td>
+                </tr>
+                <tr>
+                    <td>""</td>
+                    <td align=Left><input type=submit value="submit Form"/></td>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</HTML>
